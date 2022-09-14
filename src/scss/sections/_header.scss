@@ -1,0 +1,91 @@
+.header {
+	padding: 40px 0;
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+	}
+
+	&__menu {
+	}
+
+	&__navigation {
+		margin-right: 15px;
+	}
+}
+.logo {
+	transition: all 0.3s;
+	&:hover {
+		opacity: 0.7;
+	}
+}
+.menu {
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		& + * {
+			margin-left: 35px;
+		}
+	}
+
+	&__link {
+		font-family: "Roboto", sans-serif;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: $title-color;
+		padding: 8px 3px;
+		transition: all 0.2s;
+		&:hover,
+		&--active {
+			color: $hover-color;
+			font-weight: 700;
+			border-bottom: 1px solid $hover-color;
+		}
+	}
+}
+.navigation {
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		& + * {
+			margin-left: 25px;
+		}
+	}
+
+	&__btn {
+		position: relative;
+
+		svg path {
+			transition: all 0.3s;
+		}
+
+		&:hover {
+			svg path {
+				fill: $hover-color;
+			}
+		}
+	}
+
+	&__btn-counter {
+		position: absolute;
+		top: -9px;
+		right: -13px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: $hover-color;
+		font-weight: 500;
+		color: $white-color;
+		font-size: rem(12);
+	}
+}
