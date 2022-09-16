@@ -669,7 +669,7 @@ body {
     right: -100%;
     min-width: 320px;
     height: calc(100vh - 112px);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.5);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     -webkit-box-orient: vertical;
@@ -716,6 +716,33 @@ body {
     display: block;
   }
 
+  .footer__top {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .footer-top__info {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 40%;
+    flex: 0 1 40%;
+  }
+
+  .footer-top__menu {
+    padding-top: 50px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .footer-top__subscribe {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 60%;
+    flex: 0 1 60%;
+  }
+
 @supports (-webkit-appearance:none) {
 
 }
@@ -743,6 +770,173 @@ body {
     padding: 15px 0;
     margin: 0;
     background: #fff;
+  }
+
+  .footer {
+    padding-top: 35px;
+  }
+
+  .footer-top__info {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+  }
+
+  .footer-top__info {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    padding-bottom: 25px;
+  }
+
+  .footer-top__menu {
+    -webkit-box-ordinal-group: unset;
+    -ms-flex-order: unset;
+    order: unset;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    padding-top: unset;
+    display: block;
+  }
+
+  .footer-top__menu {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+  }
+
+  .footer-top__menu > * + * {
+    margin-left: unset;
+  }
+
+  .footer-top__subscribe {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    padding-top: 25px;
+  }
+
+  .footer-info__mail,
+  .footer-info__phone {
+    font-size: 1.125rem;
+  }
+
+  .footer-menu__title {
+    margin-top: unset;
+    padding: 10px;
+    background: #fe3e57;
+    border: 1px solid #fff;
+    color: #fff;
+    position: relative;
+  }
+
+  .footer-menu__title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 35px;
+    height: 3px;
+    background: #fff;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
+
+  .footer-menu__title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    width: 35px;
+    height: 3px;
+    background: #fff;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
+
+  .footer-menu__title.active::before {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .footer-menu__title.active::after {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .footer-menu__title + * {
+    margin-top: unset;
+  }
+
+  .footer-menu__list {
+    background: #fff;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .footer-menu__list.active {
+    height: 100%;
+    padding: 15px;
+    overflow: visible;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  .footer-menu__link {
+    font-size: 1.125rem;
+  }
+
+  .subscribe__title {
+    margin-top: unset;
+  }
+
+  .footer-bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .footer-bottom__pay {
+    margin-left: unset;
+    margin-bottom: 15px;
+  }
+
+@supports (-webkit-appearance:none) {
+
+}
+}
+
+@media (max-width: 480px) {
+  .subscribe__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .subscribe-form__email + * {
+    margin-left: unset;
+    margin-top: 10px;
   }
 
 @supports (-webkit-appearance:none) {
