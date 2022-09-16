@@ -41,6 +41,9 @@ body {
 	display: flex;
 	flex-direction: column;
 }
+.main {
+	flex: 1 1 auto;
+}
 .container {
 	max-width: $container-width + 30px;
 	padding: 0 15px;
@@ -50,4 +53,30 @@ body {
 /*--- Elements ---*/
 .no-scroll {
 	overflow: hidden;
+}
+
+.btn {
+	box-shadow: 0px 7px 20px 0 rgba(255, 17, 48, 0.3);
+	background-color: $hover-color;
+	font-family: "Roboto", sans-serif;
+	letter-spacing: em(0.8);
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 12px 25px;
+	border: 1px solid transparent;
+	transition: all 0.3s;
+	&:hover {
+		border-color: $hover-color;
+		color: $hover-color;
+		background: $bg-color;
+	}
+}
+
+.title-small {
+	font-family: "Roboto", sans-serif;
+	font-size: rem(22);
+	font-weight: 500;
+	line-height: 164%;
+	color: $title-color;
 }

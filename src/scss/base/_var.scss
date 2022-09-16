@@ -3,7 +3,7 @@ $main-color: #8d8d8d;
 $white-color: #fff;
 $title-color: #29282d;
 $hover-color: #fe3e57;
-
+$bg-color: #f6f6f6;
 // CONTAINER WIDTH
 $container-width: 1170px;
 
@@ -45,4 +45,8 @@ $container-width: 1170px;
 // FROM PX TO REM
 @function rem($px) {
 	@return calc($px / 16) + rem;
+}
+// FROM PX TO REM
+@function em($px) {
+	@return calc($px / 16) + em;
 }
