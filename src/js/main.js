@@ -1,3 +1,13 @@
+/*---SLick---*/
+$('.hero-slider').slick({
+	dots: true,
+	infinite: true,
+	fade: true,
+	arrows: false,
+	autoplay: true,
+	speed: 800,
+	autoplaySpeed: 2000,
+});
 /*---Menu---*/
 const menuBtn = document.querySelector('.menu-btn');
 const menuList = document.querySelector('.menu__list');

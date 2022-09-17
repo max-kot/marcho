@@ -62,6 +62,9 @@ input[type="submit"] {
 	background: transparent;
 }
 /*--- Links ---*/
+a[class] {
+	display: inline-block;
+}
 a[class],
 a[class]:visited {
 	text-decoration: none;

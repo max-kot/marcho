@@ -125,6 +125,10 @@ input[type=submit] {
 
 /*--- Links ---*/
 
+a[class] {
+  display: inline-block;
+}
+
 a[class],
 a[class]:visited {
   text-decoration: none;
@@ -483,9 +487,12 @@ body {
   margin-top: 5px;
 }
 
+.footer-info a {
+  display: block;
+}
+
 .footer-info__mail,
 .footer-info__phone {
-  display: block;
   color: inherit;
   font-weight: 500;
   -webkit-transition: all 0.3s;
@@ -644,8 +651,142 @@ body {
   opacity: 0.7;
 }
 
-@supports (-webkit-appearance:none) {
+.hero {
+  background: url("../img/hero/bg.png") center/contain no-repeat #f6f6f6;
+  padding-top: 70px;
+}
 
+.hero-slider {
+  position: relative;
+}
+
+.hero-slider .slick-dots {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 39px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.hero-slider .slick-dots li + * {
+  margin-left: 2px;
+}
+
+.hero-slider .slick-dots li.slick-active button {
+  border-color: #fe3e57;
+}
+
+.hero-slider .slick-dots li.slick-active button::after {
+  background: #fe3e57;
+}
+
+.hero-slider .slick-dots button {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  width: 31px;
+  height: 31px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.hero-slider .slick-dots button:hover {
+  border-color: #fe3e57;
+}
+
+.hero-slider .slick-dots button:hover::after {
+  background: #fe3e57;
+}
+
+.hero-slider .slick-dots button::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #8d8d8d;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.hero-slide__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.hero-slide__content {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 52%;
+  flex: 0 1 52%;
+}
+
+.hero-slide__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 3.625rem;
+  font-weight: 700;
+  line-height: 117%;
+  color: #29282d;
+}
+
+.hero-slide__title + * {
+  margin-top: 40px;
+}
+
+.hero-slide__text {
+  max-width: 466px;
+}
+
+.hero-slide__text + * {
+  margin-top: 59px;
+}
+
+.hero-slide__image {
+  position: relative;
+  padding-bottom: 46%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 48%;
+  flex: 0 1 48%;
+}
+
+.hero-slide__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@supports (-webkit-appearance:none) {
+  .hero {
+    background: url("../img/hero/bg.webp") center/contain no-repeat #f6f6f6;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -743,8 +884,14 @@ body {
     flex: 0 1 60%;
   }
 
-@supports (-webkit-appearance:none) {
+  .hero {
+    background: url("../img/hero/bg.png") center/cover no-repeat #f6f6f6;
+  }
 
+@supports (-webkit-appearance:none) {
+    .hero {
+      background: url("../img/hero/bg.webp") center/cover no-repeat #f6f6f6;
+    }
 }
 }
 
@@ -919,6 +1066,29 @@ body {
   .footer-bottom__pay {
     margin-left: unset;
     margin-bottom: 15px;
+  }
+
+  .hero-slide__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .hero-slide__content {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+  }
+
+  .hero-slide__image {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    height: 200px;
   }
 
 @supports (-webkit-appearance:none) {
