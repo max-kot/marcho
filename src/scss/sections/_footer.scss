@@ -157,9 +157,10 @@
 			margin-top: unset;
 			padding: 10px;
 			background: $hover-color;
-			border: 1px solid $white-color;
 			color: $white-color;
 			position: relative;
+			font-size: rem(18);
+			margin-bottom: 10px;
 			&::before {
 				content: "";
 				position: absolute;

@@ -53,7 +53,7 @@
 			right: -100%;
 			min-width: 320px;
 			height: calc(100vh - 112px);
-			background: rgba(255, 255, 255, 0.5);
+			background: rgba(234, 234, 234, 0.7);
 			backdrop-filter: blur(5px);
 			flex-direction: column;
 			flex-wrap: nowrap;
@@ -77,6 +77,7 @@
 			margin-right: 35px;
 			@include max1000px {
 				margin-right: unset;
+				margin-bottom: 10px;
 			}
 		}
 	}

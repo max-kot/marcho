@@ -2,7 +2,10 @@
 	background: url("../img/hero/bg.png") center/contain no-repeat $bg-color;
 	padding-top: 70px;
 	@include max1000px {
-		background: url("../img/hero/bg.png") center/cover no-repeat $bg-color;
+		background: url("../img/hero/bg.png") top/contain no-repeat $bg-color;
+	}
+	@include max768px {
+		padding-top: 15px;
 	}
 	&__body {
 	}
@@ -21,9 +24,17 @@
 		bottom: 39px;
 		left: 50%;
 		transform: translateX(-50%);
+		@include max768px {
+			bottom: 10%;
+			flex-direction: column;
+			left: 25px;
+		}
 		li {
 			& + * {
 				margin-left: 2px;
+				@include max768px {
+					margin-left: unset;
+				}
 			}
 			&.slick-active {
 				button {
@@ -69,15 +80,18 @@
 		justify-content: space-between;
 		align-items: center;
 		@include max768px {
-			flex-direction: column;
-			align-items: flex-start;
+			flex-direction: column-reverse;
 		}
 	}
 
 	&__content {
 		flex: 0 1 52%;
 		@include max768px {
-			flex: 0 1 100%;
+			max-width: 100%;
+			background: $white-color;
+			padding: 15px 15px 15px 55px;
+		}
+		@include max480px {
 		}
 	}
 
@@ -87,19 +101,38 @@
 		font-weight: 700;
 		line-height: 117%;
 		color: $title-color;
+		@include max768px {
+			font-size: rem(40);
+		}
+		@include max480px {
+			font-size: rem(30);
+		}
+
 		& + * {
 			margin-top: 40px;
+			@include max768px {
+				margin-top: 15px;
+			}
 		}
 	}
 
 	&__text {
 		max-width: 466px;
+		@include max768px {
+			max-width: 100%;
+		}
 		& + * {
 			margin-top: 59px;
+			@include max768px {
+				margin-top: 25px;
+			}
 		}
 	}
 
 	&__btn {
+		@include max480px {
+			width: 100%;
+		}
 	}
 
 	&__image {
@@ -107,8 +140,12 @@
 		padding-bottom: 46%;
 		flex: 0 1 48%;
 		@include max768px {
-			flex: 0 1 100%;
-			height: 200px;
+			width: 80%;
+			padding-bottom: 60%;
+		}
+		@include max480px {
+			width: 100%;
+			padding-bottom: 70%;
 		}
 		img {
 			position: absolute;
@@ -117,6 +154,9 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			@include max768px {
+				object-position: top;
+			}
 		}
 	}
 }
