@@ -130,7 +130,9 @@
 	}
 
 	&__btn {
+		padding: 10px 42px;
 		@include max480px {
+			padding: 10px;
 			width: 100%;
 		}
 	}
