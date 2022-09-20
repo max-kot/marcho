@@ -87,6 +87,9 @@ body {
 	text-transform: uppercase;
 	text-align: center;
 	color: $title-color;
+	@include max768px {
+		font-size: rem(32);
+	}
 }
 .--ibg {
 	position: relative;
