@@ -63,7 +63,7 @@ body {
 	text-align: center;
 	color: #fff;
 	text-transform: uppercase;
-	padding: 12px 25px;
+	padding: 12px 30px;
 	border: 1px solid transparent;
 	transition: all 0.3s;
 	&:hover {
@@ -87,6 +87,7 @@ body {
 	text-transform: uppercase;
 	text-align: center;
 	color: $title-color;
+	line-height: 1;
 	@include max768px {
 		font-size: rem(32);
 	}
