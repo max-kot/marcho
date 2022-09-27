@@ -72,6 +72,16 @@ body {
 		background: $bg-color;
 	}
 }
+.btn--border {
+	border-color: $hover-color;
+	color: $title-color;
+	background: $white-color;
+	box-shadow: unset;
+	&:hover {
+		background: $hover-color;
+		color: $white-color;
+	}
+}
 
 .title-small {
 	font-family: "Roboto", sans-serif;
