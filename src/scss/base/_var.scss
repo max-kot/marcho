@@ -8,6 +8,11 @@ $bg-color: #f6f6f6;
 $container-width: 1170px;
 
 // MEDIA MIXIN
+@mixin mediaMaxW($max-width) {
+	@media (max-width: $max-width) {
+		@content;
+	}
+}
 @mixin max1000px {
 	@media (max-width: 1000px) {
 		@content;

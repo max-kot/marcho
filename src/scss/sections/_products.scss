@@ -1,5 +1,8 @@
 .products {
 	padding: 120px 0;
+	@include mediaMaxW(768px) {
+		padding: 60px 0;
+	}
 	&__body {
 		display: flex;
 		flex-direction: column;
@@ -8,6 +11,10 @@
 
 	&__title {
 		margin-bottom: 30px;
+
+		@include mediaMaxW(768px) {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__text {
@@ -15,6 +22,9 @@
 		margin: 0 auto;
 		text-align: center;
 		margin-bottom: 60px;
+		@include mediaMaxW(768px) {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__list {
@@ -23,14 +33,23 @@
 		justify-content: center;
 		margin: -15px;
 		flex-wrap: wrap;
+		@include mediaMaxW(768px) {
+			margin: -10px;
+		}
 	}
 
 	&__item {
 		padding: 15px;
+		@include mediaMaxW(768px) {
+			padding: 10px;
+		}
 	}
 
 	&__btn {
 		margin-top: 60px;
+		@include mediaMaxW(768px) {
+			margin-top: 30px;
+		}
 	}
 }
 .products-item {
@@ -39,13 +58,24 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	@include mediaMaxW(768px) {
+		flex: 0 1 50%;
+	}
+	@include mediaMaxW(540px) {
+		flex: 0 1 100%;
+	}
 	&__image {
 		position: relative;
 		width: 100%;
 		padding-bottom: 102%;
 		overflow: hidden;
+		@include mediaMaxW(540px) {
+		}
 		& + * {
 			margin-top: 30px;
+			@include mediaMaxW(768px) {
+				margin-top: 15px;
+			}
 		}
 		&:hover {
 			.products-item__nav {
@@ -77,12 +107,18 @@
 		left: 50%;
 		transform: translateX(-50%);
 		transition: all 0.5s;
+		@include mediaMaxW(768px) {
+			bottom: 50px;
+		}
 	}
 
 	&__rating {
 		font-size: rem(25);
 		& + * {
 			margin-top: 20px;
+			@include mediaMaxW(768px) {
+				margin-top: 10px;
+			}
 		}
 		.rating__value {
 			display: none;
@@ -95,8 +131,12 @@
 	}
 
 	&__title {
+		text-align: center;
 		& + * {
 			margin-top: 20px;
+			@include mediaMaxW(768px) {
+				margin-top: 10px;
+			}
 		}
 	}
 	&__title-link {
