@@ -1619,14 +1619,14 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 55%;
   height: 100%;
 }
 
 .timer__body {
   margin-left: auto;
-  width: 50%;
-  background: #f6f6f6;
+  width: 45%;
+  background: transparent;
   padding: 160px 0;
   position: relative;
 }
@@ -1635,10 +1635,13 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  left: -300px;
+  bottom: 0;
+  left: -150px;
   width: 300px;
-  height: 100%;
-  background: url("../img/timer/decor.svg") left/cover no-repeat;
+  -webkit-transform: skew(25deg, 0deg);
+  -ms-transform: skew(25deg, 0deg);
+  transform: skew(25deg, 0deg);
+  background: #f6f6f6;
 }
 
 .timer__content {
@@ -1749,6 +1752,26 @@ body {
   margin-top: 5px;
 }
 
+.sponsor {
+  padding: 120px 0;
+}
+
+.sponsor__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.sponsor__item {
+  padding: 15px;
+}
+
 @supports (-webkit-appearance:none) {
   .hero {
     background: url("../img/hero/bg.webp") center/contain no-repeat #f6f6f6;
@@ -1768,10 +1791,6 @@ body {
 
   .about {
     background: url("../img/about/bg.svg") center/cover no-repeat #f6f6f6;
-  }
-
-  .timer__body::before {
-    background: url("../img/timer/decor.svg") left/cover no-repeat;
   }
 }
 
@@ -1965,9 +1984,13 @@ body {
   }
 
   .timer__body::before {
-    left: unset;
-    right: 30%;
+    width: 100%;
+    left: 50%;
     z-index: 2;
+  }
+
+  .sponsor {
+    padding: 60px 0;
   }
 
 @supports (-webkit-appearance:none) {
@@ -2328,17 +2351,9 @@ body {
     margin-top: 10px;
   }
 
-  .timer__image {
-    width: 100%;
-  }
-
   .timer__image img {
-    -o-object-position: 70%;
-    object-position: 70%;
-  }
-
-  .timer__body::before {
-    right: 0;
+    -o-object-position: 50%;
+    object-position: 50%;
   }
 
   .timer__subtitle + * {
@@ -2367,6 +2382,14 @@ body {
 
   .timer__counter .counter__seconds {
     font-size: 1.875rem;
+  }
+
+  .sponsor__list {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
 @supports (-webkit-appearance:none) {
@@ -2427,6 +2450,20 @@ body {
 
   .features-item__icon + * {
     margin-top: 15px;
+  }
+
+  .timer__image {
+    width: 100%;
+  }
+
+  .timer__image img {
+    -o-object-position: 70%;
+    object-position: 70%;
+  }
+
+  .timer__body::before {
+    left: 60%;
+    z-index: 2;
   }
 
   .timer__counter .counter__wrapper {

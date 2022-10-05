@@ -5,7 +5,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 50%;
+		width: 55%;
 		height: 100%;
 		@include mediaMaxW(1000px) {
 			z-index: 1;
@@ -13,6 +13,11 @@
 			width: 70%;
 		}
 		@include mediaMaxW(768px) {
+			img {
+				object-position: 50%;
+			}
+		}
+		@include mediaMaxW(480px) {
 			width: 100%;
 			img {
 				object-position: 70%;
@@ -22,8 +27,8 @@
 
 	&__body {
 		margin-left: auto;
-		width: 50%;
-		background: $bg-color;
+		width: 45%;
+		background: transparent;
 		padding: 160px 0;
 		position: relative;
 		@include mediaMaxW(1200px) {
@@ -37,17 +42,19 @@
 			content: "";
 			position: absolute;
 			top: 0;
-			left: -300px;
+			bottom: 0;
+			left: -150px;
 			width: 300px;
-			height: 100%;
-			background: url("../img/timer/decor.svg") left/cover no-repeat;
+			transform: skew(25deg, 0deg);
+			background: $bg-color;
 			@include mediaMaxW(1000px) {
-				left: unset;
-				right: 30%;
+				width: 100%;
+				left: 50%;
 				z-index: 2;
 			}
-			@include mediaMaxW(768px) {
-				right: 0;
+			@include mediaMaxW(480px) {
+				left: 60%;
+				z-index: 2;
 			}
 		}
 	}

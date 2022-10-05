@@ -1,0 +1,25 @@
+.sponsor {
+	padding: 120px 0;
+	@include mediaMaxW(1000px) {
+		padding: 60px 0;
+	}
+	&__body {
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include mediaMaxW(768px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	&__item {
+		padding: 15px;
+	}
+
+	&__link {
+	}
+}
