@@ -34,6 +34,9 @@ body {
 	opacity: 0;
 }
 
+.no-scroll {
+	overflow: hidden;
+}
 /*--- Grid ---*/
 .wrapper {
 	min-height: 100%;
@@ -51,9 +54,6 @@ body {
 }
 
 /*--- Elements ---*/
-.no-scroll {
-	overflow: hidden;
-}
 
 .btn {
 	box-shadow: 0px 7px 20px 0 rgba(255, 17, 48, 0.3);
@@ -101,6 +101,11 @@ body {
 	@include max768px {
 		font-size: rem(32);
 	}
+}
+.subtitle {
+	font-size: rem(22);
+	color: $hover-color;
+	text-transform: uppercase;
 }
 .--ibg {
 	position: relative;

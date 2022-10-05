@@ -93,9 +93,6 @@
 	}
 
 	&__subtitle {
-		font-size: rem(22);
-		color: $hover-color;
-		text-transform: uppercase;
 		& + * {
 			margin-top: 25px;
 			@include max1000px {

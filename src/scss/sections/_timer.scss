@@ -1,0 +1,202 @@
+.timer {
+	position: relative;
+
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50%;
+		height: 100%;
+		@include mediaMaxW(1000px) {
+			z-index: 1;
+			opacity: 0.6;
+			width: 70%;
+		}
+		@include mediaMaxW(768px) {
+			width: 100%;
+			img {
+				object-position: 70%;
+			}
+		}
+	}
+
+	&__body {
+		margin-left: auto;
+		width: 50%;
+		background: $bg-color;
+		padding: 160px 0;
+		position: relative;
+		@include mediaMaxW(1200px) {
+			padding: 100px 0;
+		}
+		@include mediaMaxW(1000px) {
+			padding: 60px 0;
+			width: 100%;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: -300px;
+			width: 300px;
+			height: 100%;
+			background: url("../img/timer/decor.svg") left/cover no-repeat;
+			@include mediaMaxW(1000px) {
+				left: unset;
+				right: 30%;
+				z-index: 2;
+			}
+			@include mediaMaxW(768px) {
+				right: 0;
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__subtitle {
+		text-align: center;
+		& + * {
+			margin-top: 30px;
+			@include mediaMaxW(768px) {
+				margin-top: 15px;
+			}
+		}
+	}
+
+	&__title {
+		& + * {
+			margin-top: 60px;
+			@include mediaMaxW(768px) {
+				margin-top: 30px;
+			}
+		}
+	}
+
+	&__counter {
+		& + * {
+			margin-top: 60px;
+			@include mediaMaxW(768px) {
+				margin-top: 30px;
+			}
+		}
+		.counter {
+			&__date {
+			}
+
+			&__date--none {
+			}
+
+			&__wrapper {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@include mediaMaxW(480px) {
+					flex-wrap: wrap;
+				}
+				& > * {
+					@include mediaMaxW(480px) {
+						margin: 5px;
+					}
+				}
+				& > * + * {
+					margin-left: 30px;
+					@include mediaMaxW(1200px) {
+						margin-left: 15px;
+					}
+					@include mediaMaxW(480px) {
+						margin-left: unset;
+					}
+				}
+			}
+
+			&__time {
+				box-shadow: 0px 10px 40px 0 rgba(187, 187, 187, 0.3);
+				background-color: #fff;
+				width: 121px;
+				height: 121px;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				padding: 5px;
+				line-height: 1;
+				text-align: center;
+				@include mediaMaxW(1200px) {
+					width: 100px;
+					height: 100px;
+				}
+			}
+
+			&__days {
+				font-size: rem(48);
+				color: $title-color;
+				font-weight: 700;
+				font-family: "Roboto", sans-serif;
+				@include mediaMaxW(1200px) {
+					font-size: rem(40);
+				}
+				@include mediaMaxW(768px) {
+					font-size: rem(30);
+				}
+			}
+
+			&__hours {
+				font-size: rem(48);
+				color: $title-color;
+				font-weight: 700;
+				font-family: "Roboto", sans-serif;
+				@include mediaMaxW(1200px) {
+					font-size: rem(40);
+				}
+				@include mediaMaxW(768px) {
+					font-size: rem(30);
+				}
+			}
+
+			&__minutes {
+				font-size: rem(48);
+				color: $title-color;
+				font-weight: 700;
+				font-family: "Roboto", sans-serif;
+				@include mediaMaxW(1200px) {
+					font-size: rem(40);
+				}
+				@include mediaMaxW(768px) {
+					font-size: rem(30);
+				}
+			}
+
+			&__seconds {
+				font-size: rem(48);
+				color: $title-color;
+				font-weight: 700;
+				font-family: "Roboto", sans-serif;
+				@include mediaMaxW(1200px) {
+					font-size: rem(40);
+				}
+				@include mediaMaxW(768px) {
+					font-size: rem(30);
+				}
+			}
+
+			&__text {
+				font-weight: 500;
+				margin-top: 5px;
+			}
+			&__loader {
+			}
+		}
+	}
+
+	&__link {
+	}
+}
