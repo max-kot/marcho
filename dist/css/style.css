@@ -1807,8 +1807,8 @@ body {
   z-index: -1;
 }
 
-.blog__title + * {
-  margin-top: 30px;
+.blog__title {
+  margin-bottom: 30px;
 }
 
 .blog__text {
