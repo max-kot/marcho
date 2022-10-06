@@ -3,9 +3,9 @@
 	padding-top: 70px;
 	@include max1000px {
 		background: url("../img/hero/bg.png") top/contain no-repeat $bg-color;
+		padding-top: 61px;
 	}
 	@include max768px {
-		padding-top: 15px;
 	}
 	&__body {
 	}

@@ -1,6 +1,11 @@
 .header {
 	padding: 40px 0;
-	position: relative;
+	@include mediaMaxW(1000px) {
+		position: fixed;
+		width: 100%;
+		background: $white-color;
+	}
+
 	z-index: 55;
 	@include max1000px {
 		border-bottom: 1px solid #eaeaea;

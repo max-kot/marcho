@@ -31,6 +31,7 @@
 		background: transparent;
 		padding: 160px 0;
 		position: relative;
+		background: $bg-color;
 		@include mediaMaxW(1200px) {
 			padding: 100px 0;
 		}
@@ -43,12 +44,11 @@
 			position: absolute;
 			top: 0;
 			bottom: 0;
-			left: -150px;
-			width: 300px;
+			left: -200px;
+			width: 100%;
 			transform: skew(25deg, 0deg);
 			background: $bg-color;
 			@include mediaMaxW(1000px) {
-				width: 100%;
 				left: 50%;
 				z-index: 2;
 			}
