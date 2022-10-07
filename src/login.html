@@ -3,7 +3,7 @@
 
 <head>
 	@@include('html/head.html', {
-	title:'Marcho Home | @from0to1',
+	"title":"Marcho Log In | @from0to1",
 	})
 </head>
 
@@ -11,14 +11,11 @@
 	<div class="wrapper">
 		@@include('./html/_header.html')
 		<main class="main">
-			@@include('./html/_hero.html')
-			@@include('./html/_features.html')
-			@@include('./html/_categories.html')
-			@@include('./html/_about.html')
-			@@include('./html/_products.html')
-			@@include('./html/_timer.html')
-			@@include('./html/_sponsor.html')
-			@@include('./html/_blog.html')
+			@@include('./html/_banner.html', {
+			"title": "Log in",
+			"activeLinkSrc":"#",
+			"activeLinkName":"Log In",
+			})
 		</main>
 		@@include('./html/_footer.html')
 	</div>

@@ -53,6 +53,12 @@ body {
 	margin: 0 auto;
 }
 
+.big-container {
+	max-width: calc(1699px + 30px);
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
 /*--- Elements ---*/
 
 .btn {
@@ -102,6 +108,9 @@ body {
 	@include max768px {
 		font-size: rem(32);
 	}
+}
+.title--regular {
+	font-weight: 400;
 }
 .subtitle {
 	font-size: rem(22);
