@@ -16,6 +16,46 @@
 			"activeLinkSrc":"#",
 			"activeLinkName":"Log In",
 			})
+			<div class="login-form">
+				<div class="container">
+					<div class="login-form__body">
+						<ul class="login-form__list form-list list-reset">
+							<li class="form-list__item">
+								<a class="form-list__link" href="#">
+									Register
+								</a>
+							</li>
+							<li class="form-list__item">
+								<a class="form-list__link form-list__link--active" href="#">
+									Login
+								</a>
+							</li>
+						</ul>
+						<form class="login-form__form form" action="#" method="post">
+							<div class="form__username">
+								<label class="form__label form__label-input" for="username">
+									Username or email address*
+								</label>
+								<input class="form__input-username form__input" type="text" name="" id="username" required>
+							</div>
+							<div class="form__password">
+								<label class="form__label form__label-input" for="password">
+									Password*
+								</label>
+								<input class="form__input-password form__input" type="password" name="" id="password" required>
+							</div>
+							<div class="form__checkbox">
+								<input class="form__input-checkbox" type="checkbox" name="" id="checkbox">
+								<label class="form__label" for="checkbox">
+									Remember me
+								</label>
+							</div>
+							<button class="form__button btn-reset" type="submit">Log in</button>
+						</form>
+						<a class="login-form__link" href="#">Lost your password?</a>
+					</div>
+				</div>
+			</div>
 		</main>
 		@@include('./html/_footer.html')
 	</div>

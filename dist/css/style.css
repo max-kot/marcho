@@ -2059,6 +2059,129 @@ body {
   fill: #fe3e57;
 }
 
+.login-form {
+  padding: 120px 0;
+}
+
+.login-form__body {
+  max-width: 570px;
+  margin: 0 auto;
+}
+
+.login-form__form + * {
+  margin-top: 20px;
+}
+
+.login-form__link {
+  display: block;
+  color: #fe3e57;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.login-form__link:hover {
+  color: #8d8d8d;
+}
+
+.form-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.form-list + * {
+  margin-top: 60px;
+}
+
+.form-list__item + * {
+  margin-left: 60px;
+}
+
+.form-list__link {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 400;
+  color: #909090;
+  text-transform: uppercase;
+  line-height: 1;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.form-list__link:hover {
+  font-weight: 700;
+  color: #fe3e57;
+}
+
+.form-list__link--active {
+  font-weight: 700;
+  color: #fe3e57;
+}
+
+.form__label-input {
+  display: block;
+}
+
+.form__label-input + * {
+  margin-top: 15px;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  background-color: #f6f6f6;
+  height: 60px;
+  border: none;
+  padding: 15px;
+}
+
+.form__username + * {
+  margin-top: 40px;
+}
+
+.form__password + * {
+  margin-top: 60px;
+}
+
+.form__checkbox + * {
+  margin-top: 20px;
+}
+
+.form__input-checkbox + * {
+  margin-left: 8px;
+}
+
+.form__button {
+  background-color: #292929;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 24px 15px;
+  width: 100%;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.form__button:hover {
+  background: #fe3e57;
+}
+
 @supports (-webkit-appearance:none) {
   .breadcrumbs__item:first-child::before {
     background: url("../img/banner/home.svg") center/cover no-repeat;
@@ -2357,6 +2480,10 @@ body {
     -ms-flex: 0 1 50%;
     flex: 0 1 50%;
     padding: 5px;
+  }
+
+  .login-form {
+    padding: 60px 0;
   }
 
 @supports (-webkit-appearance:none) {
@@ -2781,6 +2908,30 @@ body {
   .post-item__image {
     width: 50%;
     padding-bottom: 40%;
+  }
+
+  .login-form {
+    padding: 30px 0;
+  }
+
+  .form-list + * {
+    margin-top: 30px;
+  }
+
+  .form-list__item + * {
+    margin-left: 30px;
+  }
+
+  .form__username + * {
+    margin-top: 15px;
+  }
+
+  .form__password + * {
+    margin-top: 15px;
+  }
+
+  .form__button {
+    padding: 15px;
   }
 
 @supports (-webkit-appearance:none) {
