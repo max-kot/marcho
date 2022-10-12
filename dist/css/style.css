@@ -2148,6 +2148,18 @@ body {
   margin-top: 60px;
 }
 
+.form__info {
+  margin-top: 30px;
+}
+
+.form__info + * {
+  margin-top: 40px;
+}
+
+.form__info > * + * {
+  margin-top: 20px;
+}
+
 .form__checkbox + * {
   margin-top: 20px;
 }
@@ -2161,6 +2173,7 @@ body {
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2927,6 +2940,14 @@ body {
   }
 
   .form__password + * {
+    margin-top: 15px;
+  }
+
+  .form__info + * {
+    margin-top: 15px;
+  }
+
+  .form__info > * + * {
     margin-top: 15px;
   }
 

@@ -12,21 +12,21 @@
 		@@include('./html/_header.html')
 		<main class="main">
 			@@include('./html/_banner.html', {
-			"title": "Log in",
+			"title": "Register",
 			"activeLinkSrc":"#",
-			"activeLinkName":"Log In",
+			"activeLinkName":"Register",
 			})
 			<div class="login-form">
 				<div class="container">
 					<div class="login-form__body">
 						<ul class="login-form__list form-list list-reset">
 							<li class="form-list__item">
-								<a class="form-list__link" href="/register.html">
+								<a class="form-list__link form-list__link--active" href="#">
 									Register
 								</a>
 							</li>
 							<li class="form-list__item">
-								<a class="form-list__link form-list__link--active" href="#">
+								<a class="form-list__link " href="/login.html">
 									Login
 								</a>
 							</li>
@@ -44,15 +44,23 @@
 								</label>
 								<input class="form__input-password form__input" type="password" name="" id="password" required>
 							</div>
+							<div class="form__info">
+								<p class="form__text">
+									A password will be sent to your email address.
+								</p>
+								<p class="form__text">
+									Your personal data will be used to support your experience throughout this website, to manage
+									access to your account, and for other purposes described in our privacy policy.
+								</p>
+							</div>
 							<div class="form__checkbox">
 								<input class="form__input-checkbox" type="checkbox" name="" id="checkbox">
 								<label class="form__label" for="checkbox">
-									Remember me
+									Agree with Terms & Conditions
 								</label>
 							</div>
-							<button class="form__button btn-reset" type="submit">Log in</button>
+							<button class="form__button btn-reset" type="submit">Register</button>
 						</form>
-						<a class="login-form__link" href="#">Lost your password?</a>
 					</div>
 				</div>
 			</div>

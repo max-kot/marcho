@@ -106,6 +106,24 @@
 			}
 		}
 	}
+	&__info {
+		margin-top: 30px;
+		& + * {
+			margin-top: 40px;
+			@media (max-width: 768px) {
+				margin-top: 15px;
+			}
+		}
+		& > * + * {
+			margin-top: 20px;
+			@media (max-width: 768px) {
+				margin-top: 15px;
+			}
+		}
+	}
+
+	&__text {
+	}
 
 	&__checkbox {
 		& + * {
@@ -122,6 +140,7 @@
 		letter-spacing: rem(3.2);
 		text-transform: uppercase;
 		font-family: "Roboto", sans-serif;
+		font-weight: 400;
 		color: $white-color;
 		display: flex;
 		justify-content: center;
