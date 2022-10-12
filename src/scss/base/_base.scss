@@ -112,6 +112,11 @@ body {
 .title--regular {
 	font-weight: 400;
 }
+.title--blue {
+	text-transform: none;
+	color: #28384f;
+}
+
 .subtitle {
 	font-size: rem(22);
 	color: $hover-color;
