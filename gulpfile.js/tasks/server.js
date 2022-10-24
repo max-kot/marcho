@@ -1,11 +1,10 @@
-// Export configs
-const path = require('../config/path.js');
-const settings = require('../config/settings.js');
+const app = require('../configs/app.js');
+const path = require('../configs/path.js');
+const set = require('../configs/set.js');
 
-// Live server
 function server() {
-	return $.browserSync.init({
-		server: { baseDir: path.dest }
+	return app.browserSync.init({
+		server: { baseDir: path.src }
 	})
 }
 

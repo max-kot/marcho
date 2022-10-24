@@ -1,5 +1,5 @@
 {
-	"name": "gulp-my",
+	"name": "gulp-light",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
@@ -9,11 +9,15 @@
 	"author": "Max Kotlarenko",
 	"license": "ISC",
 	"devDependencies": {
+		"@babel/core": "^7.19.3",
+		"@babel/preset-env": "^7.19.4",
 		"@fancyapps/fancybox": "^3.5.7",
 		"browser-sync": "^2.27.10",
 		"del": "^6.1.1",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^8.0.0",
+		"gulp-babel": "^8.0.0",
+		"gulp-clean-css": "^4.3.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-csso": "^4.0.1",
 		"gulp-file-include": "^2.3.0",
@@ -21,6 +25,7 @@
 		"gulp-group-css-media-queries": "^1.2.2",
 		"gulp-htmlmin": "^5.0.1",
 		"gulp-imagemin": "^7.1.0",
+		"gulp-minify": "^3.1.0",
 		"gulp-newer": "^1.4.0",
 		"gulp-notify": "^4.0.0",
 		"gulp-plumber": "^1.2.1",
@@ -33,10 +38,13 @@
 		"gulp-webp": "^4.0.1",
 		"gulp-webp-css": "^1.1.0",
 		"gulp-webp-html": "^1.0.2",
+		"ion-rangeslider": "^2.3.1",
 		"jquery": "^3.6.1",
 		"mixitup": "^3.3.1",
 		"normalize.css": "^8.0.1",
 		"sass": "^1.54.9",
-		"slick-carousel": "^1.8.1"
+		"slick-carousel": "^1.8.1",
+		"webpack": "^5.74.0",
+		"webpack-stream": "^7.0.0"
 	}
 }

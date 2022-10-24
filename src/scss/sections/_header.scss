@@ -1,5 +1,6 @@
 .header {
 	padding: 40px 0;
+
 	@include mediaMaxW(1000px) {
 		position: fixed;
 		width: 100%;
@@ -12,6 +13,9 @@
 	}
 	@include max768px {
 		padding: 15px 0;
+	}
+	&--grey {
+		background: $bg-color;
 	}
 	&__body {
 		display: flex;

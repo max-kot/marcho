@@ -1,11 +1,10 @@
-// Export configs
-const path = require('../config/path.js');
-const settings = require('../config/settings.js');
+const app = require('../configs/app.js')
+const path = require('../configs/path.js')
 
 
-// Delete directory
 function clear() {
-	return $.del(path.dest)
+	return app.del(path.dest)
 }
+
 
 module.exports = clear;
