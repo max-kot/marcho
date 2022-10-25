@@ -11,7 +11,7 @@
 		}
 	}
 
-	&__contetn {
+	&__content {
 	}
 }
 .filter {
@@ -161,10 +161,10 @@
 				content: "";
 				position: absolute;
 				background: url("../img/icons/checked.svg") center / contain no-repeat;
-				left: 0;
-				right: 0;
-				top: 0;
-				bottom: 0;
+				left: 1px;
+				right: 1px;
+				top: 1px;
+				bottom: 1px;
 			}
 		}
 		&:checked ~ .color-label__text {
@@ -210,8 +210,15 @@
 	}
 }
 .size-label {
+	cursor: pointer;
 	display: flex;
 	align-items: center;
+	transition: all 0.3s;
+	&:hover {
+		.size-label__text {
+			color: $hover-color;
+		}
+	}
 	& > * {
 		display: block;
 	}
@@ -219,6 +226,22 @@
 		margin-top: 15px;
 	}
 	&__checkbox {
+		display: none;
+		&:checked ~ .size-label__icon {
+			border-color: $hover-color;
+			&::before {
+				content: "";
+				position: absolute;
+				background: url("../img/icons/checked-accent.svg") center / contain no-repeat;
+				left: 2px;
+				right: 2px;
+				top: 2px;
+				bottom: 2px;
+			}
+		}
+		&:checked ~ .size-label__text {
+			color: $hover-color;
+		}
 	}
 
 	&__icon {
@@ -227,9 +250,83 @@
 		height: 20px;
 		border: 1px solid #8d8d8d;
 		border-radius: 50%;
+		position: relative;
 		& + * {
 			margin-left: 15px;
 		}
+	}
+
+	&__text {
+		transition: all 0.3s;
+	}
+}
+
+.filter-category {
+	&__form {
+	}
+
+	&__label {
+	}
+}
+.category-label {
+	cursor: pointer;
+	display: block;
+	& + * {
+		margin-top: 15px;
+	}
+	& > * + * {
+		margin-left: 15px;
+	}
+	&__checkbox {
+		display: none;
+		&:checked ~ .category-label__text-box {
+			background: $hover-color;
+			& > * {
+				color: $white-color;
+			}
+		}
+	}
+	&__text-box {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 15px 20px;
+		background: $bg-color;
+	}
+	&__text {
+		color: $title-color;
+	}
+
+	&__number {
+		color: $title-color;
+	}
+}
+
+.filter-tags {
+	&__form {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 25px -10px -10px;
+	}
+
+	&__label {
+		padding: 10px;
+	}
+}
+.tags-label {
+	cursor: pointer;
+	&__checkbox {
+		display: none;
+		&:checked ~ .tags-label__text-box {
+			background: $hover-color;
+			border-color: $hover-color;
+			color: $white-color;
+		}
+	}
+
+	&__text-box {
+		padding: 10px 20px;
+		border: solid 1px #8d8d8d;
 	}
 
 	&__text {

@@ -2598,10 +2598,10 @@ body {
   content: "";
   position: absolute;
   background: url("../img/icons/checked.svg") center/contain no-repeat;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
 }
 .color-label__checkbox:checked ~ .color-label__text {
   color: #fe3e57;
@@ -2632,8 +2632,13 @@ body {
 }
 
 .size-label {
+  cursor: pointer;
   display: flex;
   align-items: center;
+  transition: all 0.3s;
+}
+.size-label:hover .size-label__text {
+  color: #fe3e57;
 }
 .size-label > * {
   display: block;
@@ -2641,13 +2646,93 @@ body {
 .size-label + * {
   margin-top: 15px;
 }
+.size-label__checkbox {
+  display: none;
+}
+.size-label__checkbox:checked ~ .size-label__icon {
+  border-color: #fe3e57;
+}
+.size-label__checkbox:checked ~ .size-label__icon::before {
+  content: "";
+  position: absolute;
+  background: url("../img/icons/checked-accent.svg") center/contain no-repeat;
+  left: 2px;
+  right: 2px;
+  top: 2px;
+  bottom: 2px;
+}
+.size-label__checkbox:checked ~ .size-label__text {
+  color: #fe3e57;
+}
 .size-label__icon {
   display: block;
   width: 20px;
   height: 20px;
   border: 1px solid #8d8d8d;
   border-radius: 50%;
+  position: relative;
 }
 .size-label__icon + * {
   margin-left: 15px;
+}
+.size-label__text {
+  transition: all 0.3s;
+}
+
+.category-label {
+  cursor: pointer;
+  display: block;
+}
+.category-label + * {
+  margin-top: 15px;
+}
+.category-label > * + * {
+  margin-left: 15px;
+}
+.category-label__checkbox {
+  display: none;
+}
+.category-label__checkbox:checked ~ .category-label__text-box {
+  background: #fe3e57;
+}
+.category-label__checkbox:checked ~ .category-label__text-box > * {
+  color: #fff;
+}
+.category-label__text-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #f6f6f6;
+}
+.category-label__text {
+  color: #29282d;
+}
+.category-label__number {
+  color: #29282d;
+}
+
+.filter-tags__form {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px -10px -10px;
+}
+.filter-tags__label {
+  padding: 10px;
+}
+
+.tags-label {
+  cursor: pointer;
+}
+.tags-label__checkbox {
+  display: none;
+}
+.tags-label__checkbox:checked ~ .tags-label__text-box {
+  background: #fe3e57;
+  border-color: #fe3e57;
+  color: #fff;
+}
+.tags-label__text-box {
+  padding: 10px 20px;
+  border: solid 1px #8d8d8d;
 }
