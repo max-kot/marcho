@@ -2478,6 +2478,7 @@ body {
 }
 .shop__body {
   display: flex;
+  gap: 30px;
 }
 .shop__filter {
   flex: 0 1 32%;
@@ -2485,6 +2486,10 @@ body {
 .shop__filter > * + * {
   margin-top: 40px;
 }
+.shop__content {
+  flex: 0 1 68%;
+}
+
 .filter__item {
   border: solid 1px #ececec;
   padding: 40px 30px;
@@ -2735,4 +2740,78 @@ body {
 .tags-label__text-box {
   padding: 10px 20px;
   border: solid 1px #8d8d8d;
+}
+.shop-content__products {
+  padding: 40px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.content-filter {
+  padding: 20px 30px;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-filter > * + * {
+  margin-left: 15px;
+}
+.content-filter__view {
+  display: flex;
+  align-items: center;
+}
+.content-filter__view > * + * {
+  margin-left: 15px;
+}
+.filter-view__btn {
+  padding: 0;
+  border: none;
+  display: block;
+  background: transparent;
+  width: 20px;
+}
+.filter-view__btn svg path {
+  transition: all 0.3s;
+}
+.filter-view__btn:hover svg path {
+  fill: #fe3e57;
+}
+.filter-view__btn--active svg path {
+  fill: #fe3e57;
+}
+.content-select .jq-selectbox + * {
+  margin-left: 40px;
+}
+.content-select__select .jq-selectbox__select {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  font: inherit;
+  color: inherit;
+  width: 100%;
+  padding: 0;
+  text-shadow: none;
+  height: unset;
+}
+.content-select__select .jq-selectbox__trigger {
+  border: none;
+}
+.content-select__select .jq-selectbox__trigger-arrow {
+  border: none;
+  background: url("../img/icons/arrow-down.svg") center/cover no-repeat;
+  width: 20px;
+  height: 10px;
+  top: 30%;
+  right: 0;
+}
+.content-select__select .jq-selectbox__select-text {
+  width: 100% !important;
+  padding-right: 25px;
+}
+.content-products__list {
+  width: unset;
+}
+.content-products__list .products-item {
+  flex: 0 1 50%;
 }

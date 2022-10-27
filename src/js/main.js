@@ -1,3 +1,4 @@
+$('.content-select__select').styler();
 // Range-slider
 $(".filter-price__range-slider").ionRangeSlider({
 	onStart: function (data) {
@@ -165,4 +166,12 @@ setTimeout(function () {
 	counterWrapper.classList.add('counter__wrapper--active')
 }, 1000)
 
+// shop view mode
+const viewButtons = document.querySelectorAll('.filter-view__btn')
 
+viewButtons.forEach((button) => {
+	button.addEventListener('click', function () {
+		button.classList.remove('filter-view__btn--active');
+		button.classList.add('filter-view__btn--active')
+	})
+})

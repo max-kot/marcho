@@ -19,7 +19,9 @@ path = {
 			'./node_modules/normalize.css/normalize.css',
 			'./node_modules/slick-carousel/slick/slick.css',
 			'./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
-			'./node_modules/ion-rangeslider/css/ion.rangeSlider.css',// rangeslider
+			'./node_modules/ion-rangeslider/css/ion.rangeSlider.css', // rangeslider
+			'./node_modules/jquery-form-styler/dist/jquery.formstyler.css', // Form Styler
+			'./node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css', // Form Styler Theme
 			pathSrc + '/lib/**/*.css',
 			pathSrc + '/css/**/*.css',
 			'!./src/css/style.min.css',
@@ -35,6 +37,7 @@ path = {
 			'./node_modules/slick-carousel/slick/slick.js', // slick
 			'./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js', // fancybox
 			'./node_modules/ion-rangeslider/js/ion.rangeSlider.js', // rangeslider
+			'./node_modules/jquery-form-styler/dist/jquery.formstyler.js', // Formstyler
 			pathSrc + '/lib/**/*.js',
 			pathSrc + '/js/main.js',
 			'!src/js/main.min.js',
