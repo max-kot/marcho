@@ -4,7 +4,6 @@
 @import "../../node_modules/@fancyapps/ui/dist/fancybox.css";
 @import "../../node_modules/ion-rangeslider/css/ion.rangeSlider.css";
 @import "../../node_modules/jquery.formstyler-modern/jquery.formStylerModern.css";
-@import "../../node_modules/jquery.formstyler-modern/style/jquery.formStylerModern.default.css";
 @font-face {
   font-family: "Quicksand";
   font-weight: 400;
@@ -2786,34 +2785,54 @@ body {
 .filter-view__btn--active svg path {
   fill: #fe3e57;
 }
-.content-select .jq-selectbox + * {
-  margin-left: 40px;
+.content-select .jq-selectbox {
+  z-index: 3;
 }
-.content-select__select .jq-selectbox__select {
-  border-color: transparent;
-  background: transparent;
-  box-shadow: none;
-  font: inherit;
+.content-select .jq-selectbox .jq-selectbox__select {
   color: inherit;
-  width: 100%;
-  padding: 0;
-  text-shadow: none;
-  height: unset;
-}
-.content-select__select .jq-selectbox__trigger {
   border: none;
+  background: transparent;
+  padding-right: 30px;
 }
-.content-select__select .jq-selectbox__trigger-arrow {
-  border: none;
-  background: url("../img/icons/arrow-down.svg") center/cover no-repeat;
-  width: 20px;
-  height: 10px;
-  top: 30%;
-  right: 0;
-}
-.content-select__select .jq-selectbox__select-text {
+.content-select .jq-selectbox .jq-selectbox__select .jq-selectbox__select-text {
   width: 100% !important;
-  padding-right: 25px;
+}
+.content-select .jq-selectbox .jq-selectbox__trigger {
+  border-left: unset;
+}
+.content-select .jq-selectbox:not([disabled]):not(.disabled):hover .jq-selectbox__select {
+  border: none;
+  background: #fe3e57;
+  color: #fff;
+}
+.content-select .jq-selectbox:hover .jq-selectbox__trigger .jq-selectbox__trigger-arrow {
+  top: unset;
+  background: url("../img/icons/arrow-down--white.svg") center/cover no-repeat;
+}
+.content-select .jq-selectbox .jq-selectbox__trigger .jq-selectbox__trigger-arrow {
+  position: relative;
+  display: inline-block;
+  top: unset;
+  background: url("../img/icons/arrow-down.svg") center/cover no-repeat;
+  width: 15px;
+  height: 5px;
+  border: none;
+}
+.content-select .jq-selectbox.opened .jq-selectbox__trigger-arrow {
+  background: url("../img/icons/arrow-down--white.svg") center/cover no-repeat;
+}
+.content-select .jq-selectbox .jq-selectbox__dropdown {
+  border: 1px solid #fe3e57;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: none;
+  font-size: inherit;
+}
+.content-select .jq-selectbox li.sel,
+.content-select .jq-selectbox li:hover,
+.content-select .jq-selectbox li.selected {
+  background-color: #fe3e57;
+  color: #fff;
 }
 .content-products__list {
   width: unset;
@@ -2836,7 +2855,9 @@ body {
 .post-item__date::before{background:url("../img/blog/time.svg") center/cover no-repeat}
 .color-label__checkbox:checked ~ .color-label__icon::before{background:url("../img/icons/checked.svg") center/contain no-repeat}
 .size-label__checkbox:checked ~ .size-label__icon::before{background:url("../img/icons/checked-accent.svg") center/contain no-repeat}
-.content-select__select .jq-selectbox__trigger-arrow{background:url("../img/icons/arrow-down.svg") center/cover no-repeat}
+.content-select .jq-selectbox:hover .jq-selectbox__trigger .jq-selectbox__trigger-arrow{background:url("../img/icons/arrow-down--white.svg") center/cover no-repeat}
+.content-select .jq-selectbox .jq-selectbox__trigger .jq-selectbox__trigger-arrow{background:url("../img/icons/arrow-down.svg") center/cover no-repeat}
+.content-select .jq-selectbox.opened .jq-selectbox__trigger-arrow{background:url("../img/icons/arrow-down--white.svg") center/cover no-repeat}
 }
 
  @media (max-width: 768px){
