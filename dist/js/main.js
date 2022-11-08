@@ -1,4 +1,15 @@
-// Range-slider
+import $ from "../../node_modules/jquery/dist/jquery.js";
+window.jQuery = $;
+
+
+import "../../node_modules/slick-carousel/slick/slick.js";
+
+import { Fancybox } from "../../node_modules/@fancyapps/ui/dist/fancybox.esm.js";
+
+import "../../node_modules/jquery.formstyler-modern/jquery.formStylerModern.js";
+
+import "../../node_modules/ion-rangeslider/js/ion.rangeSlider.js";
+
 $(".filter-price__range-slider").ionRangeSlider({
 	onStart: function (data) {
 		$(".filter-price__price-from").text(data.from)
@@ -9,7 +20,11 @@ $(".filter-price__range-slider").ionRangeSlider({
 		$(".filter-price__price-to").text(data.to)
 	},
 });
-/*---SLick---*/
+
+// Styler
+$('.content-select__select').styler();
+
+// Slick slider
 $('.hero-slider').slick({
 	dots: true,
 	infinite: true,
@@ -19,6 +34,14 @@ $('.hero-slider').slick({
 	speed: 800,
 	autoplaySpeed: 2000,
 });
+
+
+// Fancybox
+Fancybox.bind("[data-fancybox]", {
+	// Your options go here
+});
+
+
 /*---Menu---*/
 const menuBtn = document.querySelector('.menu-btn');
 const menuList = document.querySelector('.menu__list');
@@ -128,6 +151,7 @@ function initRating() {
 	}
 }
 
+
 // Таймер обратного отсчёта
 const date = document.querySelector('.counter__date').innerHTML;
 const days = document.querySelector('.counter__days');
@@ -165,4 +189,13 @@ setTimeout(function () {
 	counterWrapper.classList.add('counter__wrapper--active')
 }, 1000)
 
+//// shop view mode
 
+//const viewButtons = document.querySelectorAll('.filter-view__btn')
+
+//viewButtons.forEach((button) => {
+//	button.addEventListener('click', function () {
+//		button.classList.remove('filter-view__btn--active');
+//		button.classList.add('filter-view__btn--active')
+//	})
+//})

@@ -1,8 +1,9 @@
 const app = require('../configs/app.js');
 const path = require('../configs/path.js');
+const set = require('../configs/set.js');
 
-function htmlInclude() {
-	return app.gulp.src(path.htmlInclude.src)
+function html() {
+	return app.gulp.src(path.html.src)
 		.pipe(app.plumber({
 			errorHandler: app.notify.onError(error => ({
 				title: 'HTML Modules',
@@ -11,8 +12,8 @@ function htmlInclude() {
 		}
 		))
 		.pipe(app.fileInclude())
-		.pipe(app.gulp.dest(path.htmlInclude.dest))
+		.pipe(app.gulp.dest(path.html.dest))
 		.pipe(app.browserSync.stream())
 }
 
-module.exports = htmlInclude;
+module.exports = html;

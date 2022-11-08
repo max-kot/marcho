@@ -1,6 +1,5 @@
 .header {
 	padding: 40px 0;
-
 	@include mediaMaxW(1000px) {
 		position: fixed;
 		width: 100%;

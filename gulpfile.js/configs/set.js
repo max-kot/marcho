@@ -1,10 +1,12 @@
+const app = require('./app.js');
+
 const set = {
 
 	htmlmin: {
 		collapseWhitespace: true, // убирает все пробелы
 	},
 
-	scss: {
+	sass: {
 		outputStyle: 'compressed',
 	},
 
@@ -21,12 +23,37 @@ const set = {
 		suffix: '.min',
 	},
 
-	webpack: {
-		mode: 'production', // 'development'
+	babel: {
+		presets: ['@babel/preset-env'],
 	},
 
-	babel: {
-		presets: ['@babel/env'],
+	webpack: {
+		mode: 'production', // 'development'
+		output: {
+			filename: 'main.min.js'
+		},
+		//plugins: [
+		//	new app.webpack.ProvidePlugin({
+		//		$: "jquery",
+		//		jQuery: "jquery"
+		//	})
+		//],
+		module: {
+			rules: [
+				{
+					test: /\.m?js$/,
+					exclude: /node_modules/,
+					use: {
+						loader: 'babel-loader',
+						options: {
+							presets: [
+								['@babel/preset-env', { targets: "defaults" }]
+							]
+						}
+					}
+				}
+			]
+		}
 	},
 
 	fonter: {
@@ -37,6 +64,5 @@ const set = {
 		vebose: true, // для просмотра размера
 	},
 }
-
 
 module.exports = set;

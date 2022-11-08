@@ -1,73 +1,79 @@
-// Export Apps and Path
 const app = require('./configs/app.js');
 const path = require('./configs/path.js');
 const set = require('./configs/set.js');
 
+// Tasks 
 
-// Export Tasks
-const server = require('./tasks/server.js');
-const clear = require('./tasks/clear.js');
-const htmlInclude = require('./tasks/htmlInclude.js');
+const html = require('./tasks/html.js');
 const styles = require('./tasks/styles.js');
 const scripts = require('./tasks/scripts.js');
-const fonts = require('./tasks/fonts.js');
-const image = require('./tasks/image.js');
 const copy = require('./tasks/copy.js');
-
+const del = require('./tasks/del.js');
+const images = require('./tasks/images.js');
+const fonts = require('./tasks/fonts.js');
 
 // Watcher
 function watcher() {
-	app.gulp.watch(path.htmlInclude.watch, htmlInclude);
-	app.gulp.watch(path.styles.watch, styles);
-	app.gulp.watch(path.scripts.watch, scripts);
+	app.gulp.watch(path.html.watch, html)
+	app.gulp.watch(path.styles.watch, styles)
+	app.gulp.watch(path.scripts.watch, scripts)
+}
+
+// Сервер
+function server() {
+	app.browserSync.init({
+		server: {
+			baseDir: path.src // указываем деректорию
+		}
+	})
 }
 
 
-// Launch to gulp
-exports.server = server;
-exports.clear = clear;
-exports.htmlInclude = htmlInclude;
+// Launch tasks
+exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
-exports.image = image;
-exports.fonts = fonts;
-exports.copyHtml = copy.html;
-exports.copyCss = copy.css;
-exports.copyJs = copy.js;
-exports.copyLib = copy.lib;
-exports.copy = app.gulp.parallel(
+exports.watcher = watcher;
+exports.server = server;
+exports.copy = app.gulp.series(
 	copy.html,
 	copy.css,
 	copy.js,
-	copy.lib
 );
+exports.del = del;
+exports.images = images;
+exports.fonts = fonts;
 
 
+// Launch Modes
 const build = app.gulp.series(
-	clear,
-	htmlInclude,
+	del,
+	html,
 	styles,
 	scripts,
-	app.gulp.parallel(
+	app.gulp.series(
 		copy.html,
 		copy.css,
 		copy.js,
-		copy.lib,
 	),
 	fonts,
-	image,
-);
+	images,
+)
 const dev = app.gulp.series(
-	htmlInclude,
+	html,
 	styles,
 	scripts,
 	app.gulp.parallel(
 		watcher,
-		server
-	),
-);
+		server,
+	)
+)
+
 
 exports.build = build;
 exports.dev = dev;
 
+// Launch Default
 exports.default = dev;
+
+

@@ -397,37 +397,58 @@
 }
 .content-select {
 	.jq-selectbox {
-		& + * {
-			margin-left: 40px;
-		}
+		z-index: 3;
 	}
+	.jq-selectbox .jq-selectbox__select {
+		color: inherit;
+		border: none;
+		background: transparent;
+		padding-right: 30px;
+	}
+	.jq-selectbox .jq-selectbox__select .jq-selectbox__select-text {
+		width: 100% !important;
+	}
+	.jq-selectbox .jq-selectbox__trigger {
+		border-left: unset;
+	}
+	.jq-selectbox:not([disabled]):not(.disabled):hover .jq-selectbox__select {
+		border: none;
+		background: $hover-color;
+		color: $white-color;
+	}
+	.jq-selectbox:hover .jq-selectbox__trigger .jq-selectbox__trigger-arrow {
+		top: unset;
+		background: url("../img/icons/arrow-down--white.svg") center/cover no-repeat;
+	}
+
+	.jq-selectbox .jq-selectbox__trigger .jq-selectbox__trigger-arrow {
+		position: relative;
+		display: inline-block;
+		top: unset;
+		background: url("../img/icons/arrow-down.svg") center/cover no-repeat;
+		width: 15px;
+		height: 5px;
+		border: none;
+	}
+	.jq-selectbox.opened .jq-selectbox__trigger-arrow {
+		background: url("../img/icons/arrow-down--white.svg") center/cover no-repeat;
+	}
+	.jq-selectbox .jq-selectbox__dropdown {
+		border: 1px solid $hover-color;
+		border-radius: 4px;
+		background: $white-color;
+		box-shadow: none;
+		font-size: inherit;
+	}
+
+	.jq-selectbox li.sel,
+	.jq-selectbox li:hover,
+	.jq-selectbox li.selected {
+		background-color: $hover-color;
+		color: #fff;
+	}
+
 	&__select {
-		.jq-selectbox__select {
-			border-color: transparent;
-			background: transparent;
-			box-shadow: none;
-			font: inherit;
-			color: inherit;
-			width: 100%;
-			padding: 0;
-			text-shadow: none;
-			height: unset;
-		}
-		.jq-selectbox__trigger {
-			border: none;
-		}
-		.jq-selectbox__trigger-arrow {
-			border: none;
-			background: url("../img/icons/arrow-down.svg") center/cover no-repeat;
-			width: 20px;
-			height: 10px;
-			top: 30%;
-			right: 0;
-		}
-		.jq-selectbox__select-text {
-			width: 100% !important; // !
-			padding-right: 25px;
-		}
 	}
 
 	&__option {

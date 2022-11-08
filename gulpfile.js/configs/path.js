@@ -1,11 +1,11 @@
 const pathSrc = './src';
 const pathDest = './dist';
 
-path = {
+const path = {
 	src: pathSrc,
 	dest: pathDest,
 
-	htmlInclude: {
+	html: {
 		src: pathSrc + '/html/*.html',
 		watch: pathSrc + '/html/**/*.html',
 		dest: pathSrc,
@@ -15,34 +15,17 @@ path = {
 		src: pathSrc + '/scss/**/*.{scss,sass}',
 		watch: pathSrc + '/scss/**/*.{scss,sass}',
 		dest: pathSrc + '/css',
-		concat: [
-			'./node_modules/normalize.css/normalize.css',
-			'./node_modules/slick-carousel/slick/slick.css',
-			'./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
-			'./node_modules/ion-rangeslider/css/ion.rangeSlider.css', // rangeslider
-			'./node_modules/jquery-form-styler/dist/jquery.formstyler.css', // Form Styler
-			'./node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css', // Form Styler Theme
-			pathSrc + '/lib/**/*.css',
-			pathSrc + '/css/**/*.css',
-			'!./src/css/style.min.css',
-		],
-
 	},
-
 
 	scripts: {
 		src: [
-			'./node_modules/jquery/dist/jquery.js', // jquery
-			//'./node_modules/mixitup/dist/mixitup.js', // mixitup
-			'./node_modules/slick-carousel/slick/slick.js', // slick
-			'./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js', // fancybox
-			'./node_modules/ion-rangeslider/js/ion.rangeSlider.js', // rangeslider
-			'./node_modules/jquery-form-styler/dist/jquery.formstyler.js', // Formstyler
-			pathSrc + '/lib/**/*.js',
-			pathSrc + '/js/main.js',
-			'!src/js/main.min.js',
+			pathSrc + '/js/*.js',
+			'!./src/js/main.min.js'
 		],
-		watch: pathSrc + '/js/**/*.js',
+		watch: [
+			pathSrc + '/js/**/*.js',
+			'!./src/js/main.min.js',
+		],
 		dest: pathSrc + '/js',
 	},
 
@@ -60,11 +43,6 @@ path = {
 		js: {
 			src: pathSrc + '/js/**/*.js',
 			dest: pathDest + '/js',
-		},
-
-		lib: {
-			src: pathSrc + '/lib/**/*.*',
-			dest: pathDest + '/lib',
 		},
 	},
 

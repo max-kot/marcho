@@ -2,7 +2,7 @@ const app = require('../configs/app.js')
 const path = require('../configs/path.js');
 const set = require('../configs/set.js');
 
-function image() {
+function images() {
 	return app.gulp.src(path.img.src)
 		.pipe(app.plumber({
 			errorHandler: app.notify.onError(error => ({
@@ -14,11 +14,10 @@ function image() {
 		.pipe(app.webp())
 		.pipe(app.gulp.dest(path.img.dest))
 		.pipe(app.gulp.src(path.img.src))
-		.pipe(app.newer(path.img.dest)) // плагин не даёт обрабатывать что было уже обработано
 		.pipe(app.imagemin(set.imagemin))
 		.pipe(app.gulp.dest(path.img.dest))
 
 }
 
 
-module.exports = image;
+module.exports = images;

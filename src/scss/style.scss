@@ -1,4 +1,5 @@
 //BASE
+@import "./base/_libs.scss";
 @import "./base/_var.scss";
 @import "./base/_fonts.scss";
 @import "./base/_reset.scss";
@@ -11,7 +12,7 @@
 // SECTIONS
 @import "./sections/_header.scss";
 @import "./sections/_footer.scss";
-@import "./sections/_banner.scss";
+@import "./sections/_cover.scss";
 // home
 @import "./sections/_hero.scss";
 @import "./sections/_features.scss";

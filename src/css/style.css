@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/slick-carousel/slick/slick.css";
+@import "../../node_modules/@fancyapps/ui/dist/fancybox.css";
+@import "../../node_modules/ion-rangeslider/css/ion.rangeSlider.css";
+@import "../../node_modules/jquery.formstyler-modern/jquery.formStylerModern.css";
 @font-face {
   font-family: "Quicksand";
   font-weight: 400;
@@ -908,36 +913,36 @@ body {
 }
 
 @media (max-width: 1000px) {
-  .banner {
+  .cover {
     padding-top: 111px;
   }
 }
 @media (max-width: 768px) {
-  .banner {
+  .cover {
     padding-top: 61px;
   }
 }
-.banner__body {
+.cover__body {
   background: #ececec;
   padding: 140px 0;
   position: relative;
 }
 @media (max-width: 1340px) {
-  .banner__body {
+  .cover__body {
     padding: 80px 0;
   }
 }
 @media (max-width: 1000px) {
-  .banner__body {
+  .cover__body {
     padding: 60px 0;
   }
 }
 @media (max-width: 768px) {
-  .banner__body {
+  .cover__body {
     padding: 30px 0;
   }
 }
-.banner__cover {
+.cover__cover {
   position: absolute;
   top: 0;
   left: 0;
@@ -945,10 +950,10 @@ body {
   height: 100%;
   z-index: 1;
 }
-.banner__cover img {
+.cover__cover img {
   object-fit: cover;
 }
-.banner__content {
+.cover__content {
   position: relative;
   z-index: 2;
   display: flex;
@@ -956,11 +961,11 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.banner__title {
+.cover__title {
   margin-bottom: 30px;
 }
 @media (max-width: 768px) {
-  .banner__title {
+  .cover__title {
     margin-bottom: 15px;
   }
 }
@@ -972,7 +977,7 @@ body {
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: url("../img/banner/home.svg") center/cover no-repeat;
+  background: url("../img/cover/home.svg") center/cover no-repeat;
   margin-right: 8px;
 }
 .breadcrumbs__item:not(:first-child)::before {
@@ -980,7 +985,7 @@ body {
   display: inline-block;
   width: 10px;
   height: 9px;
-  background: url("../img/banner/arrow-right.svg") center/cover no-repeat;
+  background: url("../img/cover/arrow-right.svg") center/cover no-repeat;
   margin-right: 15px;
 }
 .breadcrumbs__item + * {
@@ -2780,34 +2785,54 @@ body {
 .filter-view__btn--active svg path {
   fill: #fe3e57;
 }
-.content-select .jq-selectbox + * {
-  margin-left: 40px;
+.content-select .jq-selectbox {
+  z-index: 3;
 }
-.content-select__select .jq-selectbox__select {
-  border-color: transparent;
-  background: transparent;
-  box-shadow: none;
-  font: inherit;
+.content-select .jq-selectbox .jq-selectbox__select {
   color: inherit;
-  width: 100%;
-  padding: 0;
-  text-shadow: none;
-  height: unset;
-}
-.content-select__select .jq-selectbox__trigger {
   border: none;
+  background: transparent;
+  padding-right: 30px;
 }
-.content-select__select .jq-selectbox__trigger-arrow {
-  border: none;
-  background: url("../img/icons/arrow-down.svg") center/cover no-repeat;
-  width: 20px;
-  height: 10px;
-  top: 30%;
-  right: 0;
-}
-.content-select__select .jq-selectbox__select-text {
+.content-select .jq-selectbox .jq-selectbox__select .jq-selectbox__select-text {
   width: 100% !important;
-  padding-right: 25px;
+}
+.content-select .jq-selectbox .jq-selectbox__trigger {
+  border-left: unset;
+}
+.content-select .jq-selectbox:not([disabled]):not(.disabled):hover .jq-selectbox__select {
+  border: none;
+  background: #fe3e57;
+  color: #fff;
+}
+.content-select .jq-selectbox:hover .jq-selectbox__trigger .jq-selectbox__trigger-arrow {
+  top: unset;
+  background: url("../img/icons/arrow-down--white.svg") center/cover no-repeat;
+}
+.content-select .jq-selectbox .jq-selectbox__trigger .jq-selectbox__trigger-arrow {
+  position: relative;
+  display: inline-block;
+  top: unset;
+  background: url("../img/icons/arrow-down.svg") center/cover no-repeat;
+  width: 15px;
+  height: 5px;
+  border: none;
+}
+.content-select .jq-selectbox.opened .jq-selectbox__trigger-arrow {
+  background: url("../img/icons/arrow-down--white.svg") center/cover no-repeat;
+}
+.content-select .jq-selectbox .jq-selectbox__dropdown {
+  border: 1px solid #fe3e57;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: none;
+  font-size: inherit;
+}
+.content-select .jq-selectbox li.sel,
+.content-select .jq-selectbox li:hover,
+.content-select .jq-selectbox li.selected {
+  background-color: #fe3e57;
+  color: #fff;
 }
 .content-products__list {
   width: unset;

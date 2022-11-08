@@ -1,4 +1,4 @@
-.banner {
+.cover {
 	@include mediaMaxW(1000px) {
 		padding-top: 111px;
 	}
@@ -64,7 +64,7 @@
 				display: inline-block;
 				width: 16px;
 				height: 16px;
-				background: url("../img/banner/home.svg") center/cover no-repeat;
+				background: url("../img/cover/home.svg") center/cover no-repeat;
 				margin-right: 8px;
 			}
 		}
@@ -74,7 +74,7 @@
 				display: inline-block;
 				width: 10px;
 				height: 9px;
-				background: url("../img/banner/arrow-right.svg") center/cover no-repeat;
+				background: url("../img/cover/arrow-right.svg") center/cover no-repeat;
 				margin-right: 15px;
 			}
 		}

@@ -11,7 +11,6 @@ function fonts() {
 			}))
 		}
 		)) // перехватывает ошибки и заменяет уведомления
-		.pipe(app.newer(path.fonts.dest)) // плагин не даёт обрабатывать что было уже обработано
 		.pipe(app.fonter(set.fonter)) // плагин конвертирует шрифты
 		.pipe(app.gulp.dest(path.fonts.dest))
 		.pipe(app.ttf2woff2()) // плагин конвертирует шрифты в ttf2 и woff2
