@@ -1,5 +1,14 @@
 .shop {
 	padding: 120px 0;
+
+	@media (max-width: 1000px) {
+		padding: 60px 0;
+	}
+
+	@media (max-width: 768px) {
+		padding: 30px 0;
+	}
+
 	&__body {
 		display: flex;
 		gap: 30px; // ! ПРОВЕРИТЬ НА МОБИЛЬНОМ CHROME
@@ -339,8 +348,6 @@
 	&__filter {
 	}
 	&__products {
-		padding: 40px 0;
-		border-bottom: 1px solid #ebebeb;
 	}
 }
 .content-filter {
@@ -405,16 +412,25 @@
 		background: transparent;
 		padding-right: 30px;
 	}
+
 	.jq-selectbox .jq-selectbox__select .jq-selectbox__select-text {
 		width: 100% !important;
 	}
 	.jq-selectbox .jq-selectbox__trigger {
 		border-left: unset;
 	}
+	.jq-selectbox:not([disabled]):not(.disabled).focused .jq-selectbox__select,
+	.jq-selectbox:not([disabled]):not(.disabled):focus .jq-selectbox__select {
+		border: 0;
+		background: $hover-color;
+		color: $white-color;
+		border-radius: 0;
+	}
 	.jq-selectbox:not([disabled]):not(.disabled):hover .jq-selectbox__select {
 		border: none;
 		background: $hover-color;
 		color: $white-color;
+		border-radius: 0;
 	}
 	.jq-selectbox:hover .jq-selectbox__trigger .jq-selectbox__trigger-arrow {
 		top: unset;
@@ -439,6 +455,7 @@
 		background: $white-color;
 		box-shadow: none;
 		font-size: inherit;
+		border-radius: 0;
 	}
 
 	.jq-selectbox li.sel,
@@ -446,6 +463,7 @@
 	.jq-selectbox li.selected {
 		background-color: $hover-color;
 		color: #fff;
+		border-radius: 0;
 	}
 
 	&__select {
@@ -457,8 +475,180 @@
 .content-products {
 	&__list {
 		width: unset;
+		padding: 40px 0;
+		border-bottom: 1px solid #ebebeb;
 		.products-item {
 			flex: 0 1 50%;
+			&__content {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				& > * {
+					justify-content: center;
+				}
+			}
 		}
+	}
+	&__list--list {
+		.products-item {
+			flex: 0 1 100%;
+			display: flex;
+			flex-direction: row;
+			&__image {
+				padding-bottom: unset;
+				height: 100%;
+				flex: 0 0 26%;
+			}
+
+			&__content {
+				margin-top: unset;
+				border: 1px solid #ececec;
+				border-left: none;
+				padding: 30px 40px;
+				justify-content: flex-start;
+				flex-wrap: wrap;
+				flex-direction: row;
+				& > * {
+					justify-content: flex-start;
+					align-items: center;
+				}
+			}
+
+			&__title {
+				margin: 0;
+				text-align: left;
+				order: 1;
+				flex: 0 1 100%;
+				margin-bottom: 20px;
+			}
+
+			&__price-box {
+				order: 2;
+				margin: 0;
+				line-height: 1;
+				margin-right: 40px;
+			}
+
+			&__rating {
+				order: 3;
+			}
+
+			&__text {
+				order: 4;
+				display: block;
+				margin-top: 20px;
+				margin-bottom: 25px;
+			}
+
+			&__btn {
+				order: 5;
+				display: block;
+			}
+
+			.products-item__image:hover .products-item__nav {
+				bottom: unset;
+				top: 40%;
+			}
+
+			.products-nav {
+				&__list {
+					border-radius: 0;
+					background: transparent;
+					box-shadow: none;
+				}
+				&__item {
+					border-radius: 50%;
+					background: $white-color;
+					width: 50px;
+					height: 50px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					& + * {
+						padding-left: 0;
+						margin-left: 14px;
+					}
+					&::before {
+						display: none;
+					}
+					&:nth-child(3) {
+						display: none;
+					}
+				}
+
+				&__link {
+					width: unset;
+				}
+			}
+		}
+	}
+	&__paginations {
+	}
+}
+.shop-content {
+	&__products {
+	}
+}
+.products-item {
+	&__text {
+		display: none;
+	}
+
+	&__btn {
+		display: none;
+	}
+}
+
+.paginations {
+	padding-top: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&__item {
+		& + * {
+			margin-right: 25px;
+		}
+	}
+
+	&__link {
+		text-transform: uppercase;
+		color: inherit;
+		display: flex;
+		align-items: center;
+		transition: all 0.3s;
+		&:hover {
+			color: $hover-color;
+			&::before,
+			&::after {
+				background: url("../img/icons/arrow-left--hover.svg") center/cover no-repeat;
+			}
+		}
+	}
+
+	&__link--prev {
+		margin-right: 45px;
+		&::before {
+			content: "";
+			display: inline-block;
+			background: url("../img/icons/arrow-left.svg") center/cover no-repeat;
+			width: 24px;
+			height: 11px;
+		}
+	}
+
+	&__link--next {
+		margin-left: 45px;
+		&::after {
+			content: "";
+			display: inline-block;
+			background: url("../img/icons/arrow-left.svg") center/cover no-repeat;
+			width: 24px;
+			height: 11px;
+			transform: rotate(180deg);
+		}
+	}
+
+	&__link--active {
+		color: $hover-color;
 	}
 }

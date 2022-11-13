@@ -25,13 +25,26 @@ import './modules/_star-rating--byFreelancer.js'
 // Таймер обратного отсчёта
 import './modules/_countdown.js';
 
-//// shop view mode
+// shop view mode
+const viewButtons = document.querySelectorAll('.filter-view__btn');
+const viewButtonList = document.querySelector('.filter-view__btn-list');
+const viewButtonGrid = document.querySelector('.filter-view__btn-grid');
+const productList = document.querySelector('.content-products__list')
 
-//const viewButtons = document.querySelectorAll('.filter-view__btn')
 
-//viewButtons.forEach((button) => {
-//	button.addEventListener('click', function () {
-//		button.classList.remove('filter-view__btn--active');
-//		button.classList.add('filter-view__btn--active')
-//	})
-//})
+viewButtons.forEach((button) => {
+
+	button.addEventListener('click', function () {
+		viewButtons.forEach((button) => {
+			button.classList.remove('filter-view__btn--active')
+		})
+		button.classList.add('filter-view__btn--active')
+	})
+})
+
+viewButtonList.addEventListener('click', function () {
+	productList.classList.add('content-products__list--list')
+})
+viewButtonGrid.addEventListener('click', function () {
+	productList.classList.remove('content-products__list--list')
+})
