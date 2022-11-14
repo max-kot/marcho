@@ -1,6 +1,6 @@
 .shop {
 	padding: 120px 0;
-
+	position: relative;
 	@media (max-width: 1000px) {
 		padding: 60px 0;
 	}
@@ -11,30 +11,60 @@
 
 	&__body {
 		display: flex;
-		gap: 30px; // ! ПРОВЕРИТЬ НА МОБИЛЬНОМ CHROME
+		gap: 30px;
+		@media (max-width: 768px) {
+			gap: unset;
+		}
 	}
 
 	&__filter {
 		flex: 0 1 32%;
 		& > * + * {
 			margin-top: 40px;
+			@media (max-width: 1000px) {
+				margin-top: 20px;
+			}
+		}
+		@media (max-width: 768px) {
+			// ! вид фильтра на мобиле
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			right: -100%;
+			z-index: 5;
+			background: #fff;
+			transition: right 0.3s;
+			&--active {
+				right: 0;
+			}
 		}
 	}
 
 	&__content {
 		flex: 0 1 68%;
+
+		@media (max-width: 768px) {
+			flex: 0 1 100%;
+		}
 	}
 }
 .filter {
 	&__item {
 		border: solid 1px #ececec;
 		padding: 40px 30px;
+		@media (max-width: 1000px) {
+			padding: 20px 15px;
+		}
 	}
 
 	&__title {
 		text-transform: uppercase;
 		& + * {
 			margin-top: 30px;
+			@media (max-width: 1000px) {
+				margin-top: 15px;
+			}
 		}
 	}
 
@@ -287,6 +317,10 @@
 	}
 	& > * + * {
 		margin-left: 15px;
+
+		@media (max-width: 1000px) {
+			margin-left: unset;
+		}
 	}
 	&__checkbox {
 		display: none;
@@ -336,7 +370,7 @@
 	}
 
 	&__text-box {
-		padding: 10px 20px;
+		padding: 10px 15px;
 		border: solid 1px #8d8d8d;
 	}
 
@@ -651,4 +685,24 @@
 	&__link--active {
 		color: $hover-color;
 	}
+}
+.shop {
+	&__filter-btn {
+		display: none;
+		@media (max-width: 768px) {
+			display: block;
+			position: fixed;
+			right: 15px;
+			bottom: 61px;
+			z-index: 6;
+		}
+	}
+}
+.filter-btn-active {
+	background: $hover-color;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	padding: 20px;
+	border: 1px solid #fff;
 }
