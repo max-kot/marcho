@@ -11,3 +11,27 @@ $('.hero-slider').slick({
 	speed: 800,
 	autoplaySpeed: 2000,
 });
+
+$('.product-thumb').slick({
+	arrows: false,
+	asNavFor: '.product-gallery',
+	slidesToShow: 4,
+	vertical: true,
+	focusOnSelect: true,
+	responsive: [
+		{
+			breakpoint: 1001,
+			settings: {
+				//arrows: true,
+				vertical: false,
+			}
+		},
+	],
+}
+)
+$('.product-gallery').slick({
+	arrows: false,
+	asNavFor: '.product-thumb',
+	fade: true,
+
+})
