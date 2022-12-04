@@ -3172,6 +3172,10 @@ body {
     padding-top: 30px;
   }
 }
+.product__related {
+  padding-top: 60px;
+}
+
 .product-item {
   display: flex;
   align-items: center;
@@ -3555,6 +3559,181 @@ body {
 .tab-content__item--active {
   display: block;
 }
+.reviews__list:not(:last-child) {
+  margin-bottom: 65px;
+}
+.reviews__item + * {
+  margin-top: 40px;
+}
+.reviews__form {
+  padding-bottom: 60px;
+  border-bottom: 2px solid #ececec;
+}
+
+.review {
+  display: flex;
+}
+.review__image {
+  flex: 0 0 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.review__image img {
+  object-fit: cover;
+}
+.review__image + * {
+  margin-left: 30px;
+}
+.review__content > * + * {
+  margin-top: 15px;
+}
+.review__header {
+  display: flex;
+}
+.review__name {
+  font-family: "Roboto";
+  font-size: 1rem;
+  line-height: 1.75;
+  font-weight: 400;
+  color: #29282d;
+}
+.review__name + * {
+  margin-left: 15px;
+}
+.review__date::before {
+  content: "|";
+  margin-right: 15px;
+}
+.review__rating {
+  margin-left: auto;
+}
+.review__rating.rating {
+  font-size: 25px;
+  line-height: unset;
+}
+.review__rating .rating__button {
+  cursor: default;
+}
+.review__rating .rating__value {
+  display: none;
+}
+.review__link {
+  display: inline-block;
+  color: inherit;
+  transition: all 0.3s;
+}
+.review__link:hover {
+  color: #fe3e57;
+}
+.review__link:hover::before {
+  background: url("../img/icons/reply--hover.svg") center/cover no-repeat;
+}
+.review__link::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  transition: all 0.3s;
+  background: url("../img/icons/reply.svg") center/cover no-repeat;
+  margin-right: 10px;
+}
+
+.reviews-form__title {
+  font-weight: 400;
+  padding-bottom: 15px;
+  position: relative;
+}
+.reviews-form__title + * {
+  margin-top: 40px;
+}
+.reviews-form__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #fe3e57;
+}
+.reviews-form__rating {
+  display: flex;
+}
+.reviews-form__rating-title {
+  font-size: 1rem;
+  color: #29282d;
+}
+.reviews-form__rating-title + * {
+  margin-left: 60px;
+}
+.reviews-form__label-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.reviews-form__label {
+  cursor: pointer;
+}
+.reviews-form__label + * {
+  margin-left: 25px;
+}
+.reviews-form__radio {
+  display: none;
+}
+.reviews-form__radio:checked ~ .reviews-form__icon svg path {
+  fill: #ffc35b;
+}
+.reviews-form__text {
+  display: none;
+}
+.reviews-form__icon {
+  display: flex;
+}
+.reviews-form__icon svg + * {
+  margin-left: 2px;
+}
+.reviews-form__icon svg path {
+  transition: all 0.3s;
+  fill: #8d8d8d;
+}
+.reviews-form__message-top {
+  display: flex;
+}
+.reviews-form__message-top + * {
+  margin-top: 30px;
+}
+.reviews-form__message-top > * + * {
+  margin-left: 30px;
+}
+.reviews-form__message-input {
+  flex: 0 1 50%;
+  padding: 15px 20px;
+  border: solid 1px #ececec;
+}
+.reviews-form__message-textarea {
+  flex: 1 1 100%;
+  width: 100%;
+  height: 225px;
+  padding: 15px 20px;
+  border: solid 1px #ececec;
+  margin-bottom: 40px;
+}
+.related__title {
+  margin-bottom: 60px;
+}
+.related__list .products__item {
+  flex: 0 1 25%;
+}
+@media (max-width: 1024px) {
+  .related__list .products__item {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 535px) {
+  .related__list .products__item {
+    flex: 0 1 100%;
+  }
+}
 @supports (-webkit-appearance:none){
 .breadcrumbs__item:first-child::before{background:url("../img/cover/home.svg") center/cover no-repeat}
 .breadcrumbs__item:not(:first-child)::before{background:url("../img/cover/arrow-right.svg") center/cover no-repeat}
@@ -3578,6 +3757,8 @@ body {
 .paginations__link--next::after{background:url("../img/icons/arrow-left.svg") center/cover no-repeat}
 .filter-btn-active{background:url("../img/icons/filter.svg"), #fe3e57}
 .filter-btn-active--active{background:url("../img/icons/close.svg"), #fe3e57}
+.review__link:hover::before{background:url("../img/icons/reply--hover.svg") center/cover no-repeat}
+.review__link::before{background:url("../img/icons/reply.svg") center/cover no-repeat}
 }
 
  @media (max-width: 768px){
@@ -3653,6 +3834,22 @@ body {
 }
 
  @media (max-width: 1170px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 1024px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 535px){
 
 @supports (-webkit-appearance:none){
 
