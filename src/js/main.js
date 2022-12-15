@@ -29,6 +29,6 @@ import './modules/_countdown.js';
 import './modules/_shop-views.js';
 
 // filters btn
-//import './modules/_filter-btn.js';
+import './modules/_filter-btn.js';
 
 import './modules/_tabs.js';

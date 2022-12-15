@@ -2835,7 +2835,6 @@ body {
 @media (max-width: 550px) {
   .content-filter__select-form {
     display: flex;
-    flex-direction: column;
   }
 }
 
@@ -3825,5 +3824,204 @@ body {
 @media (max-width: 535px) {
   .related__list .products__item {
     flex: 0 1 100%;
+  }
+}
+
+.blog-page {
+  padding: 120px 0;
+}
+@media (max-width: 1000px) {
+  .blog-page {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 768px) {
+  .blog-page {
+    padding: 30px 0;
+  }
+}
+.blog-page__body {
+  display: flex;
+}
+.blog-page__body > *:not(:last-child) {
+  margin-right: 30px;
+}
+@media (max-width: 768px) {
+  .blog-page__body > *:not(:last-child) {
+    margin-right: unset;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .blog-page__body {
+    flex-direction: column-reverse;
+  }
+}
+.blog-page__content {
+  flex: 0 1 67%;
+  flex: 0 1 60%;
+}
+.blog-page__aside {
+  flex: 0 1 33%;
+}
+@media (max-width: 1000px) {
+  .blog-page__aside {
+    flex: 0 1 40%;
+  }
+}
+
+.blog-aside > *:not(:last-child) {
+  margin-bottom: 40px;
+}
+@media (max-width: 1000px) {
+  .blog-aside > *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.blog-aside-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.blog-aside-info__image {
+  position: relative;
+  width: 160px;
+  padding-bottom: 51.95%;
+}
+@media (max-width: 768px) {
+  .blog-aside-info__image {
+    padding-bottom: 25%;
+  }
+}
+.blog-aside-info__image:not(:last-child) {
+  margin-bottom: 40px;
+}
+@media (max-width: 1000px) {
+  .blog-aside-info__image:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+.blog-aside-info__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blog-aside-info__title {
+  font-family: "Roboto";
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #29282d;
+}
+.blog-aside-info__subtitle {
+  color: #fe3e57;
+}
+.blog-aside-info__subtitle:not(:last-child) {
+  margin-bottom: 20px;
+}
+@media (max-width: 1000px) {
+  .blog-aside-info__subtitle:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+.blog-aside-info__text:not(:last-child) {
+  margin-bottom: 30px;
+}
+.blog-aside-info__social .social__item {
+  width: 18px;
+}
+
+.blog-aside-post__item {
+  display: flex;
+  align-items: center;
+}
+.blog-aside-post__item:not(:last-child) {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ececec;
+}
+.blog-aside-post__item:not(:first-child) {
+  padding-top: 20px;
+}
+.blog-aside-post__item > *:not(:last-child) {
+  margin-right: 20px;
+}
+.blog-aside-post__image {
+  position: relative;
+  flex: 0 0 80px;
+  height: 80px;
+}
+.blog-aside-post__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blog-aside-post__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.56;
+  color: #29282d;
+}
+.blog-aside-post__link {
+  color: inherit;
+  transition: all 0.3s;
+}
+.blog-aside-post__link:hover {
+  color: #fe3e57;
+}
+.blog-aside-post__date {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.blog-aside-post__date::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("../img/icons/date.svg") center/cover no-repeat;
+  margin-right: 11px;
+}
+
+.blog-content__item:not(:last-child) {
+  margin-bottom: 60px;
+}
+@media (max-width: 768px) {
+  .blog-content__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .blog-content__item .post-item__wrapper {
+    flex-direction: column;
+  }
+}
+.blog-content__item .post-item__image {
+  padding-bottom: 65%;
+}
+@media (max-width: 768px) {
+  .blog-content__item .post-item__image {
+    padding-bottom: 40%;
+    width: 100%;
+  }
+}
+.blog-content__item .post-item__data {
+  justify-content: flex-start;
+}
+.blog-content__item .post-item__data > * + * {
+  margin-left: 30px;
+}
+@media (max-width: 480px) {
+  .blog-content__item .post-item__data > * + * {
+    margin-left: unset;
+    margin-top: 15px;
   }
 }
