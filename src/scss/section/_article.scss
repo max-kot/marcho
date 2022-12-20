@@ -49,6 +49,7 @@
 	}
 
 	&__info {
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
@@ -180,10 +181,56 @@
 	&__content {
 		border: solid 1px #ececec;
 		padding: 30px;
-		display: flex;
-		flex-wrap: wrap;
-		@media (max-width: 768px) {
-			flex-direction: column;
+		overflow: hidden;
+		h3 {
+			font-family: "Roboto", sans-serif;
+			font-size: rem(22);
+			font-weight: 500;
+			line-height: 164%;
+			color: $title-color;
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+
+		blockquote {
+			font-family: "Roboto", sans-serif;
+			font-size: rem(22);
+			font-weight: 400;
+			line-height: 1.45;
+			padding: 40px;
+			border-left: 3px solid $hover-color;
+			background-color: #f6f6f6;
+			color: $title-color;
+			@media (max-width: 425px) {
+				padding: 15px;
+				font-size: rem(18);
+			}
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+
+		img.article-item__left-image {
+			float: left;
+			&:not(:last-child) {
+				margin-right: 30px;
+				margin-bottom: 15px;
+			}
+		}
+
+		img.article-item__right-image {
+			float: right;
+			&:not(:last-child) {
+				margin-left: 30px;
+				margin-bottom: 15px;
+			}
 		}
 	}
 
@@ -234,59 +281,6 @@
 			height: 16px;
 			background: url("../img/icons/user.svg") center/cover no-repeat;
 			margin-right: 10px;
-		}
-	}
-
-	&__title {
-		&:not(:last-child) {
-			margin-bottom: 20px;
-		}
-	}
-
-	&__text {
-		&:not(:last-child) {
-			margin-bottom: 20px;
-		}
-	}
-
-	&__blockquote {
-		font-family: "Roboto", sans-serif;
-		font-size: rem(22);
-		font-weight: 400;
-		line-height: 1.45;
-		padding: 40px;
-		border-left: 3px solid $hover-color;
-		background-color: #f6f6f6;
-		color: $title-color;
-		@media (max-width: 425px) {
-			padding: 15px;
-			font-size: rem(18);
-		}
-		&:not(:last-child) {
-			margin-bottom: 20px;
-		}
-	}
-
-	&__image-text {
-		position: relative;
-		min-height: 272px;
-		flex: 0 1 47.5%;
-		@media (max-width: 768px) {
-			flex: 0 1 100%;
-		}
-		&:not(:last-child) {
-			margin-right: 5%;
-			@media (max-width: 768px) {
-				margin-right: unset;
-				margin-bottom: 30px;
-			}
-		}
-	}
-
-	&__text-image {
-		flex: 0 1 47.5%;
-		@media (max-width: 768px) {
-			flex: 0 1 100%;
 		}
 	}
 }
